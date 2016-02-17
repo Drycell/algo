@@ -3,12 +3,12 @@
 #include <algorithm>
 
 int calc(int first_input, char operation, int second_input);	 				// return calc result
-int stod(std::string *number, std::string input); 								// sorted string number --change--> dec number
+int stod(std::string *number, std::string input); 						// sorted string number --change--> dec number
 
 int main(void)
 {
 	std::string number[11] = {"zero", "one", "two", "three", "four", "five", 
-							  "six", "seven", "eight", "nine", "ten"};
+				  "six", "seven", "eight", "nine", "ten"};
 	char operation[2];
 	int loop, input1_dec, input2_dec, result_dec;
 	std::string input[2];
@@ -18,14 +18,14 @@ int main(void)
 	std::string result;
 	bool *a = new bool [loop];
 
-	for(int i = 0; i < 11; i++)													   // result save
+	for(int i = 0; i < 11; i++)								  // result save
 	{
 		std::sort(number[i].begin(), number[i].end());
 	}
 
 	for(int i = 0; i < loop; i++)
 	{
-		std::cin >> input[0] >> operation[0] >> input[1] >> operation[1] >> result; // input numerical formular
+		std::cin >> input[0] >> operation[0] >> input[1] >> operation[1] >> result; 	   // input numerical formular
 		
 		std::sort(input[0].begin(), input[0].end());
 		std::sort(input[1].begin(), input[1].end());
